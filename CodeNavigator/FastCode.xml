@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FastCode</name>
+    </assembly>
+    <members>
+        <member name="T:CodeNavigator.AutoComplete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CodeNavigator.AutoComplete.GetShortcuts">
+            <summary>
+            get the shurtcuts defined
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.AutoComplete.DoAutoComplete(EnvDTE.TextSelection,System.String)">
+            <summary>
+            TODO: move to separate class
+            </summary>
+            <param name="selection"></param>
+            <param name="Keypress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.AutoComplete.AddFileExt(System.String)">
+            <summary>
+            Add a file extension that is used with this autocomplete object
+            </summary>
+            <param name="ext">file extension without "."</param>
+        </member>
+        <member name="M:CodeNavigator.ClassRefactor.SplitReverse(System.String,System.Char,System.String@,System.String@)">
+            <summary>
+            Split string at last pos of delim and return first and second part.
+            </summary>
+            <param name="s"></param>
+            <param name="delim"></param>
+            <param name="first"></param>
+            <param name="second"></param>
+            <returns>if delim was found</returns>
+        </member>
+        <member name="M:CodeNavigator.VsCommand.#ctor(FastCode,System.String,System.String,System.Int32)">
+            <summary>
+            A VS command that can be registered and handles actions
+            </summary>
+            <param name="fastCode"></param>
+            <param name="name"></param>
+            <param name="toolTip"></param>
+            <param name="iconIdx"></param>
+        </member>
+        <member name="M:CodeNavigator.VsCommand.Register(Microsoft.VisualStudio.CommandBars.CommandBarPopup,Microsoft.VisualStudio.CommandBars.CommandBar)">
+            <summary>
+            Register at VS
+            </summary>
+        </member>
+        <member name="M:CodeNavigator.VsCommand.AddNamedCommand(System.Int32)">
+            <summary>
+            Add a named command to the IDE
+            </summary>
+            <param name="commandStyleFlags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.VsCommand.Exec">
+            <summary>
+            Execute the command
+            </summary>
+            <returns>true if command was handled</returns>
+        </member>
+        <member name="M:CodeNavigator.CodeAnalyzer.ExtractUntil(System.String,System.Int32@,System.Char)">
+            <summary>
+            returns string starting at pStart until (excluding) lookup
+            pStart then points to the next char after the returned string
+            </summary>
+            <param name="text"></param>
+            <param name="pStart"></param>
+            <param name="lookup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.CodeAnalyzer.SkipBlock(System.String,System.Int32@,System.Char,System.Char)">
+            <summary>
+            Skip a block starting with openBrace and ending with closeBrace
+            </summary>
+            <param name="text"></param>
+            <param name="pStart">Should point to the opening brace or before it. 
+            After execution it points to the begin of the block (first char after '{' ).</param>
+            <param name="openBrace"></param>
+            <param name="closeBrace"></param>
+            <returns>the position of the closing brace.</returns>
+        </member>
+        <member name="M:CodeNavigator.CodeAnalyzer.SkipBlockReverse(System.String,System.Int32@,System.Char,System.Char)">
+            <summary>
+            Skip a block starting with openBrace and ending with closeBrace
+            </summary>
+            <param name="text"></param>
+            <param name="pStart">Should point to the closing brace or after it. 
+            After execution it points to the end of the block (last char before '}' ).</param>
+            <param name="openBrace"></param>
+            <param name="closeBrace"></param>
+            <returns>the position of the opening brace.</returns>
+        </member>
+        <member name="M:CodeNavigator.CodeAnalyzer.ExtractUntilReverse(System.String,System.Int32@,System.Char)">
+            <summary>
+            returns the string between lookup and pStart
+            pStart then points to the begin of the string
+            </summary>
+            <param name="text"></param>
+            <param name="pStart"></param>
+            <param name="lookup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.CodeAnalyzer.ExtractUntilReverse(System.String,System.Int32@,System.Char[])">
+            <summary>
+            returns the string between lookup and pStart
+            pStart then points to the begin of the string
+            </summary>
+            <param name="text"></param>
+            <param name="pStart"></param>
+            <param name="lookup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.CodeAnalyzer.ExtractUntilReverseOrStart(System.String,System.Int32@,System.Char[])">
+            <summary>
+            returns the string between lookup and pStart
+            pStart then points to the begin of the string
+            </summary>
+            <param name="text"></param>
+            <param name="pStart"></param>
+            <param name="lookup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.CodeAnalyzer.FindFirstClassDef(System.String)">
+            <summary>
+            looks for the first def. of a class within code
+            will not remove comments
+            </summary>
+            <param name="code"></param>
+            <returns>index of first char of the "class" keyword</returns>
+        </member>
+        <member name="M:CodeNavigator.CodeAnalyzer.NextId(System.String,System.String[],System.String,System.Int32)">
+            <summary>
+            Find full qualified ID. If nameSpace is given, it will check
+            for correct namespace definitions or usings
+            </summary>
+            <param name="code"></param>
+            <param name="nameSpace"></param>
+            <param name="ID"></param>
+            <param name="pos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.CodeItem.GetProjectItemIgnoreExt(EnvDTE.ProjectItems,System.String)">
+            <summary>
+            Lookup name in items and ignore the file extension
+            </summary>
+            <param name="items"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.CodeItem.GetText(System.Object)">
+            <summary>
+            Get the selected text from the beginning of the document until the 
+            given position.
+            </summary>
+            <param name="until">position in document or null to return the entire doc</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.CodeItem.ReplaceWord(System.String,System.String)">
+            <summary>
+            Use this only if set content is the only operation! If using 
+            multiple of such operations, the content will be read and written
+            multiple times.
+            </summary>
+            <param name="oldWord"></param>
+            <param name="newWord"></param>
+        </member>
+        <member name="M:CodeNavigator.CodeItem.ContainsWord(EnvDTE.ProjectItem,System.String)">
+            <summary>
+            Returns the code of the item if it contains the requested identifier
+            </summary>
+            <param name="item"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.CodeItem.RenameFiles(System.String)">
+            <summary>
+            Rename all related files according to the new item name (e.g., the new class name)
+            </summary>
+            <param name="newItemName"></param>
+        </member>
+        <member name="M:CodeNavigator.CodeItemCpp.ReplaceWordInClass(System.String,System.String)">
+            <summary>
+            replace in both, cpp and header
+            </summary>
+            <param name="oldWord"></param>
+            <param name="newWord"></param>
+        </member>
+        <member name="M:CodeNavigator.DocumentHandler.GetCurrentProject">
+            <summary>
+            get the active project
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.DocumentHandler.ExtractClass">
+            <summary>
+            extract class refactoring for the current selection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.DocumentHandler.NewClass(System.String,System.Boolean)">
+            <summary>
+            Create new class according to namespace at current cursor location.
+            If a single word is selected, this will be used as the name of the 
+            class.
+            </summary>
+            <param name="content"></param>
+            <param name="bExtract"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.DocumentHandler.AddFileExt(System.String)">
+            <summary>
+            Add a file extension that is used with this autocomplete object
+            </summary>
+            <param name="ext">file extension without "."</param>
+        </member>
+        <member name="M:CodeNavigator.DocumentHandler.HandlesFileExt(System.String)">
+            <summary>
+            returns whether this object handles the given document based
+            on the documents file extension
+            </summary>
+            <param name="ext">file extension in lower case without "."</param>
+            <returns></returns>
+        </member>
+        <member name="T:FastCode">
+            <summary>The object for implementing an Add-in.</summary>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:FastCode.#ctor">
+            <summary>Implements the constructor for the Add-in object. Place your initialization code within this method.</summary>
+        </member>
+        <member name="M:FastCode.OnConnection(System.Object,Extensibility.ext_ConnectMode,System.Object,System.Array@)">
+            <summary>Implements the OnConnection method of the IDTExtensibility2 interface. Receives notification that the Add-in is being loaded.</summary>
+            <param term='application'>Root object of the host application.</param>
+            <param term='connectMode'>Describes how the Add-in is being loaded.</param>
+            <param term='addInInst'>Object representing this Add-in.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:FastCode.OnDisconnection(Extensibility.ext_DisconnectMode,System.Array@)">
+            <summary>Implements the OnDisconnection method of the IDTExtensibility2 interface. Receives notification that the Add-in is being unloaded.</summary>
+            <param term='disconnectMode'>Describes how the Add-in is being unloaded.</param>
+            <param term='custom'>Array of parameters that are host application specific.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:FastCode.OnAddInsUpdate(System.Array@)">
+            <summary>Implements the OnAddInsUpdate method of the IDTExtensibility2 interface. Receives notification when the collection of Add-ins has changed.</summary>
+            <param term='custom'>Array of parameters that are host application specific.</param>
+            <seealso class='IDTExtensibility2' />		
+        </member>
+        <member name="M:FastCode.OnStartupComplete(System.Array@)">
+            <summary>Implements the OnStartupComplete method of the IDTExtensibility2 interface. Receives notification that the host application has completed loading.</summary>
+            <param term='custom'>Array of parameters that are host application specific.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:FastCode.OnBeginShutdown(System.Array@)">
+            <summary>Implements the OnBeginShutdown method of the IDTExtensibility2 interface. Receives notification that the host application is being unloaded.</summary>
+            <param term='custom'>Array of parameters that are host application specific.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:FastCode.QueryStatus(System.String,EnvDTE.vsCommandStatusTextWanted,EnvDTE.vsCommandStatus@,System.Object@)">
+            <summary>Implements the QueryStatus method of the IDTCommandTarget interface. This is called when the command's availability is updated</summary>
+            <param term='commandName'>The name of the command to determine state for.</param>
+            <param term='neededText'>Text that is needed for the command.</param>
+            <param term='status'>The state of the command in the user interface.</param>
+            <param term='commandText'>Text requested by the neededText parameter.</param>
+            <seealso class='Exec' />
+        </member>
+        <member name="M:FastCode.Exec(System.String,EnvDTE.vsCommandExecOption,System.Object@,System.Object@,System.Boolean@)">
+            <summary>Implements the Exec method of the IDTCommandTarget interface. This is called when the command is invoked.</summary>
+            <param term='commandName'>The name of the command to execute.</param>
+            <param term='executeOption'>Describes how the command should be run.</param>
+            <param term='varIn'>Parameters passed from the caller to the command handler.</param>
+            <param term='varOut'>Parameters passed from the command handler to the caller.</param>
+            <param term='handled'>Informs the caller if the command was handled or not.</param>
+            <seealso class='Exec' />
+        </member>
+        <member name="M:FastCode.GetDocumentHandler">
+            <summary>
+            Get the event handler for the current document.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CodeNavigator.ShortcutListWindow">
+            <summary>
+            Interaction logic for UserControl1.xaml
+            </summary>
+            
+            <summary>
+            ShortcutListWindow
+            </summary>
+        </member>
+        <member name="M:CodeNavigator.ShortcutListWindow.#ctor">
+            <summary>
+            Create an empty dialog to list files in the curren project
+            </summary>
+        </member>
+        <member name="M:CodeNavigator.ShortcutListWindow.Add(CodeNavigator.Shortcut)">
+            <summary>
+            Add a shortcut to the dialog
+            </summary>
+            <param name="shortcut"></param>
+        </member>
+        <member name="M:CodeNavigator.ShortcutListWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:CodeNavigator.CodeGenerator.Create(System.String)">
+            <summary>
+            Create an instance
+            </summary>
+            <param name="language">the language ("cpp", "cs", TBD)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.CodeItemCppHeader.GetMethodDecl(CodeNavigator.MethodImpl)">
+            <summary>
+            Get the decl from code, which corresponds to the given impl.
+            </summary>
+            <param name="impl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNavigator.MethodImpl.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Create a method impl.
+            </summary>
+            <param name="retType">return type (TODO: currently includes templ. def)</param>
+            <param name="name">name of method (excluding class name)</param>
+            <param name="args">arguments (excluding '(' and ')')</param>
+            <param name="modifiers">list of modifiers</param>
+            <param name="init">initializer in ctors</param>
+            <param name="body">method body (excluding '{' and '}')</param>
+        </member>
+        <member name="T:CodeNavigator.Shortcut">
+            <summary>Implements a shortcut the is identified by the text typed to create it.</summary>
+        </member>
+        <member name="M:CodeNavigator.Shortcut.#ctor(System.String,System.String)">
+            <summary>
+            Create a new shortcut
+            </summary>
+            <param name="shortcut">the key to lookup while typing</param>
+            <param name="text">the replaced text</param>
+        </member>
+        <member name="M:CodeNavigator.Shortcut.PartialMatch(System.String)">
+            <summary>
+            returns true if the shortcut ends with str
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CodeNavigator.Shortcut.shortcut">
+            <summary>
+            The the key to lookup while typing
+            </summary>
+        </member>
+        <member name="P:CodeNavigator.Shortcut.text">
+            <summary>
+            The text of the shortcut that replaces the typed key
+            </summary>
+        </member>
+        <member name="P:CodeNavigator.Shortcut.cursor">
+            <summary>
+            the position of the cursor in the replaced text
+            </summary>
+        </member>
+        <member name="T:CodeNavigator.Shortcuts">
+            <summary>
+            A lsit of shortcuts for a language
+            </summary>
+        </member>
+        <member name="M:CodeNavigator.Shortcuts.#ctor(System.String)">
+            <summary>
+            Shortcuts for the given language
+            </summary>
+            <param name="language"></param>
+        </member>
+        <member name="M:CodeNavigator.Shortcuts.AddShortcut(System.String,System.String)">
+            <summary>
+            Add a new shortcut
+            </summary>
+            <param name="shortcutKey">the key used for completion</param>
+            <param name="text">the replacement text</param>
+        </member>
+        <member name="P:CodeNavigator.Shortcuts.Language">
+            <summary>
+            the language these shortcuts are used for
+            </summary>
+        </member>
+    </members>
+</doc>

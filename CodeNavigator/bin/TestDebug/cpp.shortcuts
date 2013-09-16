@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Edit this file to add, remove, or change shortcuts.
+     When saved, the shortcuts loaded in Visual Studio are 
+     automatically updated!
+		-->
+<shortcuts>
+	<files>h,hpp,cpp,cxx,cx,c</files>
+	<shortcut>
+		<!-- the text used to lookup this shortcut while typing 
+				 - may contain multiple words
+				 - must start with a word (i.e., does not work for parts of
+					 words that start within some text
+					 
+				<key>some text to look for</key>
+		-->
+
+		<!-- the inserted value which replaces the shortcut 
+				 - $ marks the cursor position after replacement
+				 - line breaks are copied into the editor
+				<value>some new text $ followed by other text</value>
+		-->
+	</shortcut>
+
+	<!-- #pragma ... -->
+	<shortcut>
+		<key>#p</key>
+		<value>#pragma $</value>
+	</shortcut>
+
+	<!-- #pragma once -->
+	<shortcut>
+		<key>#pragma o</key>
+		<value>#pragma once
+$</value>
+	</shortcut>
+
+	<!-- #pragma message -->
+	<shortcut>
+		<key>#pragma m</key>
+		<value>#pragma message ("$")</value>
+	</shortcut>
+
+	<shortcut>
+		<key>#m</key>
+		<value>#pragma message ("$")</value>
+	</shortcut>
+
+	<!-- #pragma warning -->
+	<shortcut>
+		<key>#pragma w</key>
+		<value>#pragma warning (push)
+			#pragma warning (disable : $)
+			#pragma warning (pop)</value>
+	</shortcut>
+
+	<shortcut>
+		<key>#w</key>
+		<value>#pragma warning (push)
+			#pragma warning (disable : $)
+			#pragma warning (pop)</value>
+	</shortcut>
+
+	<!-- #include "" -->
+	<shortcut>
+		<key>#in</key>
+		<value>#include "$"</value>
+	</shortcut>
+
+	<shortcut>
+		<key>#in</key>
+		<value>#include "$"</value>
+	</shortcut>
+
+	<!-- #include <> -->
+	<shortcut>
+		<key>#&lt;</key>
+		<value>#include &lt;$&gt;</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>#include &lt;</key>
+		<value>#include &lt;$&gt;</value>
+	</shortcut>
+
+	<!-- #if -->
+	<shortcut>
+		<key>#if </key>
+		<value>#if $
+#endif</value>
+	</shortcut>
+
+	<!-- #ifdef -->
+	<shortcut>
+		<key>#ifd</key>
+		<value>#ifdef $
+#endif</value>
+	</shortcut>
+
+	<!-- #ifndef -->
+	<shortcut>
+		<key>#ifn</key>
+		<value>#ifndef $
+#endif</value>
+	</shortcut>
+
+	<!-- #define -->
+	<shortcut>
+		<key>#def</key>
+		<value>#define $</value>
+	</shortcut>
+
+	<!-- using namespace -->
+	<shortcut>
+		<key>using n</key>
+		<value>using namespace $</value>
+	</shortcut>
+
+	<!-- return true; -->
+	<shortcut>
+		<key>rt</key>
+		<value>return true;$</value>
+	</shortcut>
+
+	<!-- return false; -->
+	<shortcut>
+		<key>rf</key>
+		<value>return false;$</value>
+	</shortcut>
+
+	<!-- return 0; -->
+	<shortcut>
+		<key>r0</key>
+		<value>return 0;$</value>
+	</shortcut>
+
+	<!-- for (int i ...) -->
+	<shortcut>
+		<key>fori</key>
+		<value>for (int i=0; i&lt;$; i++)</value>
+	</shortcut>
+
+  <!-- for (auto iter ...) -->
+  <shortcut>
+    <key>fora</key>
+    <value>for (auto iter = $.begin(); iter != .end(); iter++)</value>
+  </shortcut>
+
+  <!-- for (each ...) -->
+  <shortcut>
+    <key>fore</key>
+    <value>for each (auto elem in $)</value>
+  </shortcut>
+
+	<!-- if -->
+	<shortcut>
+		<key>if(</key>
+		<value>if ($)</value>
+	</shortcut>
+
+	<!-- if -->
+	<shortcut>
+		<key>if (</key>
+		<value>if ($)</value>
+	</shortcut>
+
+	<!-- { ... } -->
+	<shortcut>
+		<key>){</key>
+		<value>)
+		{
+			$
+		}</value>
+	</shortcut>
+
+	<!-- try ... catch -->
+	<shortcut>
+		<key>try{</key>
+		<value>try
+{
+	$
+}
+catch (...)
+{
+}</value>
+	</shortcut>
+
+	<!-- else { ... } -->
+	<shortcut>
+		<key>else{</key>
+		<value>else
+		{
+			$
+		}</value>
+	</shortcut>
+
+	<!-- else if (...) -->
+	<shortcut>
+		<key>elif</key>
+		<value>else if ($)</value>
+	</shortcut>
+
+	<!-- nullptr -->
+	<shortcut>
+		<key>null</key>
+		<value>nullptr</value>
+	</shortcut>
+	
+	<!--
+	<shortcut>
+		<key>if </key>
+		<value>if ($)
+</value>
+	</shortcut>
+	-->
+
+	<!-- switch -->
+	<shortcut>
+		<key>switch </key>
+		<value>switch ($)
+		{
+			case 1:
+				break;
+			default:
+				break;
+		}</value>
+	</shortcut>
+
+	<!-- VERIFY -->
+	<shortcut>
+		<key>VER</key>
+		<value>VERIFY$</value>
+	</shortcut>
+
+	<!-- VERIFY_RET$ -->
+	<shortcut>
+		<key>VERIFY_</key>
+		<value>VERIFY_RET$</value>
+	</shortcut>
+
+	<!-- VERIFY(...) -->
+	<shortcut>
+		<key>VERIFY(</key>
+		<value>VERIFY($);</value>
+	</shortcut>
+
+	<!-- VERIFY_RET(...) -->
+	<shortcut>
+		<key>VERIFY_RET(</key>
+		<value>VERIFY_RET($);</value>
+	</shortcut>
+
+	<!-- VERIFY_RETF(...); -->
+	<shortcut>
+		<key>VERIFY_RETF</key>
+		<value>VERIFY_RETF($);</value>
+	</shortcut>
+
+	<!-- VERIFY_RETV(..., ...); -->
+	<shortcut>
+		<key>VERIFY_RETV</key>
+		<value>VERIFY_RETV($, );</value>
+	</shortcut>
+
+	<!-- ASSERT(...); -->
+	<shortcut>
+		<key>ASS</key><value>ASSERT($);</value>
+	</shortcut>
+
+  <shortcut>
+    <key>A0</key>
+    <value>ASSERT(false);</value>
+  </shortcut>
+
+  <shortcut>
+    <key>TRACE</key>
+    <value>TRACE("$\n");</value>
+  </shortcut>  
+
+  <!-- #pragma message (FIXME "...!") 
+       type "#fix" to get a macro that prints file and line for FIXME
+       this macro should be defined before using "FIX" (e.g., in stdafx.h)
+  -->
+	<shortcut>
+		<key>FIX</key>
+		<value>#pragma message (FIXME "$!")</value>
+	</shortcut>
+
+  <shortcut>
+    <key>#fix</key>
+    <value>#define __MKSTR__(L)     #L
+      #define __APPLY__(M, L)  M(L)
+      #define __STRLINE__      __APPLY__(__MKSTR__, __LINE__)
+      #define FIXME __FILE__ "(" __STRLINE__ ") : FIX: "$
+    </value>
+  </shortcut>
+  
+  <!-- data types -->
+  <shortcut><key>UI64</key><value>unsigned __int64</value></shortcut>
+  <shortcut><key>I64</key> <value>__int64</value></shortcut>
+  <shortcut><key>ULONG</key>  <value>unsigned long</value></shortcut>
+  <shortcut><key>ulong</key>  <value>unsigned long</value></shortcut>
+  <shortcut>
+    <key>#lambda</key>
+    <value>[$] () -> bool { return true; }</value>
+  </shortcut>
+
+  <shortcut>
+    <key>#get</key>
+    <value>__declspec ( property ( get = $ ) ) -type- -var-;</value>
+  </shortcut>
+
+  <shortcut>
+    <key>#set</key>
+    <value>__declspec ( property ( put = $, get = ? ) ) -type- -var-;</value>
+  </shortcut>
+</shortcuts>

@@ -1,0 +1,4 @@
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\me\FastCode\1.0\\FastCode.dll
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\me\FastCode\1.0\\FastCode.pkgdef
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\me\FastCode\1.0\\extension.vsixmanifest
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\me\FastCode\1.0\\FastCode.pdb

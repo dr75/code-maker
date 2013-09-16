@@ -1,0 +1,15 @@
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\\FastCode.dll
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\FastCode\FastCode.dll
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\\FastCode.pkgdef
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\\extension.vsixmanifest
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\FastCode\\cpp.shortcuts
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\FastCode\\cs.shortcuts
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\\FastCode.pdb
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\FastCode\cpp.shortcuts
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\FastCode\cs.shortcuts
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\FastCode\FastCode.pdb
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\\FastCodeSetup.dll
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\\FastCodeSetup.pkgdef
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\\FastCodeSetup.pdb
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\FastCode\\FastCode.dll
+C:\Users\108014315\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\MR\FastCode\1.0\\license.txt

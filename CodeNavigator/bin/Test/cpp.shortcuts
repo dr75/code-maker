@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<shortcuts>
+	<files>h,hpp,cpp,cxx,cx,c</files>
+	<shortcut>
+		<!-- the text used to lookup this shortcut while typing 
+				 - may contain multiple words
+				 - must start with a word (i.e., does not work for parts of
+					 words that start within some text
+					 
+				<key>some text to look for</key>
+		-->
+
+		<!-- the inserted value which replaces the shortcut 
+				 - $ marks the cursor position after replacement
+				 - line breaks are copied into the editor
+				<value>some new text $ followed by other text</value>
+		-->
+	</shortcut>
+
+	<shortcut>
+		<key>#in</key>
+		<value>#include "$"</value>
+	</shortcut>
+
+	<shortcut>
+		<key>#in</key>
+		<value>#include "$"</value>
+	</shortcut>
+
+	<shortcut>
+		<key>#&lt;</key>
+		<value>#include &lt;$&gt;</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>#include &lt;</key>
+		<value>#include &lt;$&gt;</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>#if </key>
+		<value>#if $
+#endif</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>#ifd</key>
+		<value>#ifdef $
+#endif</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>#ifn</key>
+		<value>#ifndef $
+#endif</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>#def</key>
+		<value>#define $</value>
+	</shortcut>
+
+  <shortcut>
+    <key>using n</key>
+    <value>using namespace $</value>
+  </shortcut>
+
+  <shortcut>
+		<key>rt</key>
+		<value>return true;$</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>rf</key>
+		<value>return false;$</value>
+	</shortcut>
+  
+  <shortcut>
+    <key>r0</key>
+    <value>return 0;$</value>
+  </shortcut>
+	
+	<shortcut>
+		<key>fori</key>
+		<value>for (int i=0; i&lt;$; i++)</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>if(</key>
+		<value>if ($)</value>
+	</shortcut>
+  
+  <shortcut>
+    <key>if (</key>
+    <value>if ($)</value>
+  </shortcut>
+
+  <shortcut>
+    <key>){</key>
+    <value>)
+		{
+			$
+		}</value>
+  </shortcut>
+
+  <shortcut>
+    <key>try{</key>
+    <value>try
+{
+	$
+}
+catch (...)
+{
+}</value>
+  </shortcut>
+
+  <shortcut>
+    <key>else{</key>
+    <value>else
+		{
+			$
+		}</value>
+  </shortcut>
+
+  <shortcut>
+    <key>elif</key>
+    <value>else if ($)</value>
+  </shortcut>
+	
+  <!--
+	<shortcut>
+		<key>if </key>
+		<value>if ($)
+</value>
+	</shortcut>
+	-->
+  
+	<shortcut>
+		<key>switch </key>
+		<value>switch ($)
+		{
+			case 1:
+				break;
+			default:
+				break;
+		}</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>VER</key>
+		<value>VERIFY$</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>VERIFY_</key>
+		<value>VERIFY_RET$</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>VERIFY(</key>
+		<value>VERIFY($);</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>VERIFY_RET(</key>
+		<value>VERIFY_RET($);</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>VERIFY_RETF</key>
+		<value>VERIFY_RETF($);</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>VERIFY_RETV</key>
+		<value>VERIFY_RETV($, );</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>ASS</key><value>ASSERT($);</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>FIX</key>
+		<value>#pragma message (__REMINDER__ \"$ !!!\")</value>
+	</shortcut>
+
+</shortcuts>

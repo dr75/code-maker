@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<shortcuts>
+	<files>cs</files>
+	<shortcut>
+		<!-- the text used to lookup this shortcut while typing 
+				 - may contain multiple words
+				 - must start with a word (i.e., does not work for parts of
+					 words that start within some text
+					 
+				<key>some text to look for</key>
+		-->
+
+		<!-- the inserted value which replaces the shortcut 
+				 - $ marks the cursor position after replacement
+				 - line breaks are copied into the editor
+				<value>some new text $ followed by other text</value>
+		-->
+	</shortcut>
+	
+	<shortcut>
+		<key>rt</key>
+		<value>return true;$</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>rf</key>
+		<value>return false;$</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>fori</key>
+		<value>for (int i=0; i&lt;$; i++)
+		</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>fore</key>
+		<value>foreach ($ )
+		</value>
+	</shortcut>
+
+	<shortcut>
+		<key>if(</key>
+		<value>if ($)</value>
+	</shortcut>
+
+	<shortcut>
+		<key>if (</key>
+		<value>if ($)</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>switch </key>
+		<value>switch ($)
+	{
+		case 1:
+			break;
+		default:
+			break;
+	}</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>VER</key>
+		<value>if (!$)
+	Debug.Assert(false);</value>
+	</shortcut>
+		
+	<shortcut>
+		<key>ASS</key><value>Debug.Assert($);</value>
+	</shortcut>
+	
+	<shortcut>
+		<key>TODO</key>
+		<value>#pragma message (__REMINDER__ \"$ !!!\")</value>
+	</shortcut>
+
+</shortcuts>

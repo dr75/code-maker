@@ -1,0 +1,173 @@
+﻿TODO
+
+FIX
++ FIX: argument list in generated impl. broken
+- FIX: GetCollectionForItem works only with .cpp, not .cc, etc.
+- FIX: Store all files in a map to faster resolve corresponding items (cf. GetProjectItem.GetProjectItem)
+- FIX: Lookup command in CommandBar before adding it (VsCommand.LookupCommand)
+     OR: do not add button to command bar if command was already there	 
+- FIX: sometimes the "x" appears (i.e., fails to delete the x after Formating)
+	=> a problem with line breaks? the char offset of a selection uses a 
+	single char to represent \r\n and starts at 1
+- FIX: line endings in shortcuts & templates
+- FIX: NewClass - header is inserted into wrong collection (below cpp files)
+- FIX: Offsets in text operations on open documents (e.g, CodeItem.DeleteRange)
+- FIX: Too many whitespace in new class
+- OPT: preprocessor statements when parsing method decls. (cf. method impl.)
+- OPT: SkipBlock - handle strings correctly (e.g., ")" in argument list)
+- OPT: Extract Class - extract ML comments (may already work due to an issue
+       with removing comments and comment mappings
+- ADD: https://github.com/AlaShiban/MultiEdit
+
+CODING-ADD
+- ADD Cpp for header if not there
+
+GUI-ADD
+- ADD: 
+	- settings dialog (option to use always AutoCode -> otherwise only if file 
+	  starts with //@FastCode)
+	- dialog to list special keys (e.g., ';')
+- ADD: submenus
+	- settings (options, list shortcuts, list special keys)
+	- refactor (rename class, extract class)
+	- add (class, method impl)
+- ADD: info window to show what was generated (e.g., MethodImpl.)
+- ADD: disable menu entries that are not available for a given lang.
+
+RELEASE (min 4h)
+- icons
+- fix installer
+
+<=== free v1.0 (TODO: 8h coding, 8h test, 4h release = 22h -> 11d*2h)
+
+KillerFeatures
+- AutoCode - Design Pattern
+	- Singleton
+	- pimpl
+	- pimpl mit auto delegation
+	- Factory?
+- Generate 
+	- getter/setter
+	- properties
+- Link cpp/h
+	- Method name & arguments
+	- Method comments
+	- Member names	
+- Enfore coding guidelines
+- LiveQuality
+
+FIX
+- Menu entry to open shortcuts and templates in editor
+- Reload shortcuts and templates on FileSave
+- NewMethod:
+	- create comment around default arguments
+- NewMethod (if called method not available in referenced class)
+- NewClass: 
+	- use class name only if not after '.' or '->'
+	- allow files with same name in different project folders
+	  -> use TemplateInst.GetOutputFileName
+	- check for item (class, enum) with same full qual. name
+	  -> check all files with same file name for full qual name
+- Reload project items from folder structure
+- switch to impl. if typing ';': also switch if whitespace after last ';'?
+
+!!!!! BIG DIFF TO VisualAssist: Link sync code file; e.g. to
+- implement interface or abstract class (add impl. if new method is added; rename methods)
+- implement interface via delegation
+
+CODE GENERATION
+* NewTest: Create new Test for current class
+* Implement Interface
+
+REFACTORING
+* 1h RenameMethod
+	* 1h simple rename of all methods with the same name using replace in .cpp and .h file
+		* <white><name>(
+		* this-><name>(
+	* advanced rename in file (check correct type)
+		* check arguments to rename
+	* rename calls (in file & in other files)
+		* this->
+		* class::
+		* object-> object.
+		* ((class*)object)->
+		* (*(class*)object).
+
+* New/Extract class
+  * New/Ex SuperClass (not in MSVC/C#)
+  * New/Ex SubClass (not in MSVC/C#)
+  * inheritance (sub-/super class) vs. delegation (new class delegates to old class and vice versa)
+  * superclass: add virtual to public methods and methods called from superclass
+  * subclass: replace instances of superclass with inst. of subclass
+  * Extract class for nested classes
+  * extract class in which cursor is located (select class to let the user
+	  check if it is correct); then use extract selection
+
+* Rename class
+- 1h popup menu when on method decl., class def., fwd. decl, file
+- 3h rename class references in other classes (from same and dependent projects)
+	- scan for "namespace ... {" and "using namespace ... ;" before the found name
+	- ignore "using namespace" via includes
+	- replace in include stmts
+  * more correct / complete renaming
+	* use includes to lookup "using namespace" stmts.
+	* use include graph to check if a class def or class decl. is included
+	* replace in comments (show popup to ask for)
+	* rename the class' namespace (must rename / add usings and fwd decls.)
+
+- MoveClass to different folder in project
+- 2h search for keywords
+- 4h do not auto complete if in comment
+- Autocompletion for comments
+- show shortcut errors (error list in Shortcuts.cs)
+* Pointer-to-ref / ref-to-pointer
+* RenameMember
+	* references
+* Extract Interface
+* Extract Method (use same command as ExtractClass)
+	* Create arguments
+
+SHORTCUTS
+- shortcuts with separate value for header and cpp
+
+AUTOCODE (everything that is automatically done if file under control of FastCode)
+* CreateMethodImpl
+	* for all the methods in class def.
+	* for all the methods SELECTED in class def.
+	(=> existing impl. are ignored)
+* Rename Class: rename file, class, etc. when renaming class in code 
+	* store current class name in comment
+	* rename in code while typing?
+	* rename file on save
+* NewTest: 
+	* Automatically create Test for current class if member is added
+	* Synchronize tests with impl. -> change signature (still errors)
+* Implement interface
+* NewMethod (when cursor on method call)
+* Add ctor initializer when defining members with init (e.g., int i = 45)
+* AddInclude (popup when on class -> choose file if more than one)
+* Create Method
+* Rename Method
+* Synchronize method signature
+* Add members with strings to enum
+* ctrl-x :
+   * cut method decl & impl
+   * cut member and initializer
+* add ctor/dtor when typing ctor...
+* properties - setter/getter
+* iterate
+* inline / non-inline via context menu
+* enums with array of string values
+* Add reference: add member as ref and init in ctor (add argument to ctor) and delete in dtor
+
+TIME MACHINE & BACKUP
+* Create delta on each ctrl-s for a file (store as backward delta)
+* show a timeline (e.g., using a diagramm with edited files shown as bars
+
+NEW - LiveQuality
+- Show complexity of current document
+- Show coding violations in current document
+- Update on save
+
+LATER
+- include stdafx.h -> get from project properties

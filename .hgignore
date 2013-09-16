@@ -1,0 +1,10 @@
+syntax: glob
+*.suo
+CodeNavigator/bin
+CodeNavigator/obj
+CodeNavigator/CodeNavigator.csproj.user
+CodeNavigator/CodeNavigator.csproj.vspscc
+CodeNavigator/FastCode.csproj.user
+CodeNavigator/setup/bin
+CodeNavigator/setup/obj
+CodeNavigator/setup/FastCodeSetup.csproj.user

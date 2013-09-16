@@ -1,0 +1,1 @@
+﻿virtual ~<t:name />();
