@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCode", "CodeNavigator\FastCode.csproj", "{54C786E5-FD14-4036-92AE-E9F25B71534B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCode", "source\FastCode.csproj", "{54C786E5-FD14-4036-92AE-E9F25B71534B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCodeSetup", "CodeNavigator\setup\FastCodeSetup.csproj", "{751EE60B-AA14-4D11-86FD-AD9DD274963C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCodeSetup", "source\setup\FastCodeSetup.csproj", "{751EE60B-AA14-4D11-86FD-AD9DD274963C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
